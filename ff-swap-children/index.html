@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>FF Swap Children Elements</title>
+
+<style>
+.box {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	line-height: 200px;
+	background: #eee;
+	text-align: center;
+}
+
+.blue {
+	background: #ddddf3;
+}
+
+.red {
+	background: #f3dddd;
+}
+</style>
+</head>
+<body>
+
+	<div class="swap-children">
+		<div class="box blue">LEFT ELEMENT</div>
+		<div class="box red">RIGHT ELEMENT</div>
+	</div>
+	
+	<br/><br/>
+	
+	<div class="swap-children-2">
+		<div class="box blue">LEFT ELEMENT</div>
+		<div class="box red">RIGHT ELEMENT</div>
+	</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="ff-swap-children.js"></script>
+	
+	<script>
+	(function($){
+		$(function(){
+		
+			$('.swap-children').ff_swap_children();
+			
+			// set custom window width
+			$('.swap-children-2').ff_swap_children({
+				window_width: 1024,
+			});
+			
+		});
+	})(jQuery)
+	</script>
+	
+</body>
+</html>
