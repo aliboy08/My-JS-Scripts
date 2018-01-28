@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>FF Equal Heights</title>
+
+<style>
+.container  {
+	overflow: hidden;
+}
+
+.box {
+	float: left;
+	width: 33.33%;
+	background: #eee;
+	vertical-align: top;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.blue {
+	background: #ddddf3;
+}
+
+.red {
+	background: #f3dddd;
+}
+</style>
+</head>
+<body>
+
+	
+	<h2>Default</h2>
+	
+	<div class="container container-1">
+	
+		<div class="box blue">Drool kitty loves pigs sun bathe</div>
+		
+		<div class="box red">Put a little hair on your chest with Hairy Ipsum. A collection of “manly” placeholder text samples for those mockups that need an extra dose of handsome ruggedness.</div>
+		
+		<div class="box">Drool kitty loves pigs sun bathe, for when in doubt, wash for attack the dog then pretend like nothing happened. Chirp at birds spread kitty litter all over house. Human is washing you why halp oh the horror flee scratch hiss bite eat grass, throw it back up or jump launch to pounce upon little yarn mouse, bare fangs at toy run hide.</div>
+
+	</div>
+	
+	<h2>No on resize height update</h2>
+	
+	<div class="container container-2">
+	
+		<div class="box blue">Drool kitty loves pigs sun bathe</div>
+		
+		<div class="box red">Put a little hair on your chest with Hairy Ipsum. A collection of “manly” placeholder text samples for those mockups that need an extra dose of handsome ruggedness.</div>
+		
+		<div class="box">Drool kitty loves pigs sun bathe, for when in doubt, wash for attack the dog then pretend like nothing happened. Chirp at birds spread kitty litter all over house. Human is washing you why halp oh the horror flee scratch hiss bite eat grass, throw it back up or jump launch to pounce upon little yarn mouse, bare fangs at toy run hide.</div>
+
+	</div>
+	
+	<h2>Disable on screen width: 1024</h2>
+	
+	<div class="container container-3">
+	
+		<div class="box blue">Drool kitty loves pigs sun bathe</div>
+		
+		<div class="box red">Put a little hair on your chest with Hairy Ipsum. A collection of “manly” placeholder text samples for those mockups that need an extra dose of handsome ruggedness.</div>
+		
+		<div class="box">Drool kitty loves pigs sun bathe, for when in doubt, wash for attack the dog then pretend like nothing happened. Chirp at birds spread kitty litter all over house. Human is washing you why halp oh the horror flee scratch hiss bite eat grass, throw it back up or jump launch to pounce upon little yarn mouse, bare fangs at toy run hide.</div>
+
+	</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="ff-equal-heights.js"></script>
+	
+	<script>
+	(function($){
+		$(function(){
+			$('.container-1 .box').ff_equal_heights();
+			
+			$('.container-2 .box').ff_equal_heights({
+				enable_on_resize: false,
+			});
+			
+			$('.container-3 .box').ff_equal_heights({
+				disable_on_width: 1024,
+			});
+			
+		});
+	})(jQuery)
+	</script>
+	
+</body>
+</html>
