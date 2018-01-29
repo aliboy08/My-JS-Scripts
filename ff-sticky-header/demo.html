@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>FF Sticky Header Demo</title>
+
+<link rel="stylesheet" href="style.css" type="text/css"/>
+
+<style>
+body {
+	min-height: 2000px;
+}
+
+.header {
+	background: #80cce4;
+	padding: 30px;
+	text-align: center;
+	color: #fff;
+	letter-spacing: 10px;
+	font-family: sans-serif;
+	font-weight: 700;
+}
+
+.section {
+	background: #eee;
+	height: 400px;
+}
+.section:nth-child(odd) {
+	background: #29282b;
+}
+</style>
+</head>
+<body>
+
+	<div class="header">HEADER</div>
+	<div class="section"></div>
+	<div class="section"></div>
+	<div class="section"></div>
+	<div class="section"></div>
+	<div class="section"></div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="ff-sticky-header.js"></script>
+	
+	<script>
+	(function($){
+		$(function(){
+			// Get animations here: http://animista.net/play/entrances
+			$('.header').ff_sticky_header();
+			// Settings:
+			//disable_width: 539, // disable sticky on this window screen size
+			//offset: false, // set specific position to activate sticky header, defaults to header height
+			//stick_class: 'swing-in-top-fwd',
+			//unstick_class: 'swing-in-bottom-fwd',
+			//body_stick_class: 'with-sticky-header',
+		});
+	})(jQuery)
+	</script>
+	
+</body>
+</html>

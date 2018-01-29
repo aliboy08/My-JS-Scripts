@@ -1,3 +1,5 @@
+/*! FF Swap Children Plugin v.1 */
+
 (function($){
 	
 	$.fn.ff_swap_children = function( options ) {

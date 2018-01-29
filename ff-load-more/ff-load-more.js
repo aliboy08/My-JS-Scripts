@@ -1,3 +1,5 @@
+/*! FF Load More Plugin v.1 */
+
 (function($){
 	
 	$.fn.ff_load_more = function(options){

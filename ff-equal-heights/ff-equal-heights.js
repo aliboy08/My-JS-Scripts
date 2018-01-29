@@ -1,3 +1,4 @@
+/*! FF Equal Heights Plugin v.1 */
 (function($){
 	
 	$.fn.ff_equal_heights = function( options ) {
