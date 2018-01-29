@@ -2,9 +2,104 @@
 <head>
 <title>FF Sticky Header Demo</title>
 
-<link rel="stylesheet" href="style.css" type="text/css"/>
-
 <style>
+/* Essential Styles */
+.ff-sticky-header.stick {
+	position: fixed;
+	width: 100%;
+}
+
+/**
+ * ----------------------------------------
+ * animation swing-in-top-fwd
+ * ----------------------------------------
+ */
+@-webkit-keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+
+.swing-in-top-fwd {
+	-webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+	        animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+
+/**
+ * ----------------------------------------
+ * animation swing-in-bottom-fwd
+ * ----------------------------------------
+ */
+@-webkit-keyframes swing-in-bottom-fwd {
+  0% {
+    -webkit-transform: rotateX(100deg);
+            transform: rotateX(100deg);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    opacity: 1;
+  }
+}
+@keyframes swing-in-bottom-fwd {
+  0% {
+    -webkit-transform: rotateX(100deg);
+            transform: rotateX(100deg);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    opacity: 1;
+  }
+}
+
+.swing-in-bottom-fwd {
+	-webkit-animation: swing-in-bottom-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+	        animation: swing-in-bottom-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+
+
+
+/* FOR DEMO ONLY */
 body {
 	min-height: 2000px;
 }

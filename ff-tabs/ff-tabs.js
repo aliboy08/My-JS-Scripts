@@ -1,7 +1,7 @@
 /*! FF Custom Tabs Plugin v.1 */
 (function($){
 	
-	$.fn.ff_custom_tabs = function(options) {
+	$.fn.ff_tabs = function(options) {
 	
 		this.addClass('ff-custom-tabs-init');
 		
@@ -24,7 +24,7 @@
 		tabs.children().hide();
 		
 		// Set first nav item active
-		$(nav.children()[0]).addClass('active');
+		$(nav.children('a')[0]).addClass('active');
 		
 		// Show first tab item
 		$(tabs.children()[0]).fadeIn();
@@ -41,7 +41,7 @@
 			target = this_nav_item.attr('href');
 			
 			// Set nav item active
-			nav.children().removeClass('active'); // reset
+			nav.children('a').removeClass('active'); // reset
 			this_nav_item.addClass('active');
 			
 			target_tab = tabs.find(target);
