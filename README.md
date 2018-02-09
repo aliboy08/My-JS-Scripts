@@ -1,1 +1,1 @@
-# My-JS-Scripts
+Custom jQuery Plugins
