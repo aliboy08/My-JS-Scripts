@@ -33,6 +33,7 @@
 			
 			// Enable Dropdown Nav
 			if( settings.show_dropdown_nav ) {
+				create_dropdown_nav();
 				if( $(window).width() <= settings.show_dropdown_nav.screen ){
 					display_dropdown_nav('show');
 				} else {
@@ -87,7 +88,6 @@
 			
 			// Remove class on outside click
 			$(window).click(function() {
-				console.log('hide dropdown');
 				dropdown_container.removeClass('show');
 			});
 			
