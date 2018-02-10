@@ -1,34 +1,7 @@
 <html>
 <head>
 <title>FF Tabs</title>
-
-<style>
-.tabs-nav {
-	padding: 0;
-	margin-bottom: 20px;
-}
-
-.tabs-nav a {
-	background: #eee;
-	padding: 5px;
-	display: inline-block;
-}
-
-.tabs-nav a.active {
-	background: #444;
-	color: #fff;
-}
-
-.tabs {
-	background: #eee;
-	padding: 10px;
-}
-
-.tab {
-	display: none;
-}
-
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -58,12 +31,20 @@
 	<script>
 	(function($){
 		$(function(){
-			$('.ff-tabs').ff_tabs();
-			// Settings:
-			// nav: '.tabs-nav',	// nav
-			// tabs: '.tabs',		// tabs
-			// on_init: '',		// Callback function on initialize
-			// after_click: '', 	// Callback function on click
+			$('.ff-tabs').ff_tabs({
+				same_height: true,
+				show_dropdown_nav: {screen:768},
+			});
+			/*
+			settings: {
+				nav: string, default '.tabs-nav'
+				tabs: string, defalt '.tabs'
+				same_height: boolean, default false
+				show_dropdown_nav: object, default { screen: 768 } , set false to disable
+				on_init: function, default null
+				after_click: function, default null
+			}
+			*/
 		});
 	})(jQuery)
 	</script>
